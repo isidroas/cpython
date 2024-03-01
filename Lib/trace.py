@@ -391,11 +391,11 @@ def _find_executable_linenos(filename):
     return _find_lines(code, strs)
 
 class Trace:
-    def __init__(self, count=1, trace=1, countfuncs=0, countcallers=0,
+    def __init__(self, count=True, trace=True, countfuncs=False, countcallers=False,
                  ignoremods=(), ignoredirs=(), infile=None, outfile=None,
                  timing=False):
         """
-        @param count true iff it should count number of times each
+        @param count true if it should count number of times each
                      line is executed
         @param trace true iff it should print out each line that is
                      being counted
